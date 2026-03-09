@@ -12,4 +12,4 @@ udiskie &
 
 ```sh
 cd ./path_to_this_repository
-Run nix run .#flash to flash firmware
+nix run .#flash
