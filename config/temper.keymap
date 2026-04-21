@@ -113,41 +113,46 @@
         /*     key-positions = <RT2 RT3>; */
         /*     bindings = <&kp DOLLAR>; */
         /* }; */
-        /* combo_hash { */
-        /*     timeout-ms = <COMBO_TERM>; */
-        /*     key-positions = <RT1 RT2>; */
-        /*     bindings = <&kp HASH>; */
-        /* }; */
-        /* combo_lpar { */
-        /*     timeout-ms = <COMBO_TERM>; */
-        /*     key-positions = <LT3 LM3>; */
-        /*     bindings = <&kp LPAR>; */
-        /* }; */
-        combo_lpar {
+        combo_hash {
             timeout-ms = <COMBO_TERM>;
-            key-positions = <LT2 LM2>;
-            bindings = <&kp LPAR>;
+            key-positions = <RT1 RM1>;
+            bindings = <&kp HASH>;
         };
         combo_excl {
             timeout-ms = <COMBO_TERM>;
             key-positions = <LT1 LM1>;
             bindings = <&kp EXCL>;
         };
-        /* combo_rpar { */
-        /*     timeout-ms = <COMBO_TERM>; */
-        /*     key-positions = <RT3 RM3>; */
-        /*     bindings = <&kp RPAR>; */
-        /* }; */
+        combo_lpar {
+            timeout-ms = <COMBO_TERM>;
+            key-positions = <LT2 LM2>;
+            bindings = <&kp LPAR>;
+        };
+        combo_lbrc {
+            timeout-ms = <COMBO_TERM>;
+            key-positions = <LT3 LM3>;
+            bindings = <&kp LBRC>;
+        };
+        combo_lbkt {
+            timeout-ms = <COMBO_TERM>;
+            key-positions = <LM2 LB2>;
+            bindings = <&kp LBKT>;
+        };
         combo_rpar {
             timeout-ms = <COMBO_TERM>;
             key-positions = <RT2 RM2>;
             bindings = <&kp RPAR>;
         };
-        /* combo_rbkt { */
-        /*     timeout-ms = <COMBO_TERM>; */
-        /*     key-positions = <RT1 RM1>; */
-        /*     bindings = <&kp RBKT>; */
-        /* }; */
+        combo_rbrc {
+            timeout-ms = <COMBO_TERM>;
+            key-positions = <RT3 RM3>;
+            bindings = <&kp RBRC>;
+        };
+        combo_rbkt {
+            timeout-ms = <COMBO_TERM>;
+            key-positions = <RM2 RB2>;
+            bindings = <&kp RBKT>;
+        };
         /* combo_caret { */
         /*     timeout-ms = <COMBO_TERM>; */
         /*     key-positions = <RT0 RT1>; */
@@ -247,7 +252,7 @@
         sym_layer {
             bindings = <
         // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-              &kp CARET     &kp HASH      &kp STAR      &kp DOLLAR     &kp GRAVE         &kp SEMI         XXX          XXX          XXX        &kp BSPC
+              &kp CARET     &kp HASH      &kp STAR      &kp DOLLAR     &kp GRAVE         &kp SEMI         XXX       &kp LPAR      &kp RPAR    &kp BSPC
         // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
               &kp LBKT     &kp LBRC       &kp RBRC       &kp RBKT     &kp TILDE         &kp COMMA    &kp SPACE         XXX           XXX        &kp RET
         // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
