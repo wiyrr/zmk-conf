@@ -139,13 +139,13 @@
         sym_layer {
             bindings = <
         // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-              &kp EXCL      &kp AT       &kp PRCNT      &kp AMPS       &trigrave        &kp COLON       XXX            XXX           XXX           XXX
+              &kp LBKT      &kp LBRC     &kp RBRC       &kp RBKT      &kp GRAVE         &kp COLON    &kp SEMI          XXX           XXX           XXX
         // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-              &kp CARET     &kp LPAR      &kp RPAR      &kp DOLLAR    &kp TILDE          XXX           XXX            XXX           XXX           XXX
+              &kp CARET     &kp LPAR     &kp RPAR      &kp DOLLAR     &kp TILDE            XXX           XXX           XXX           XXX           XXX
         // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                 XXX           XXX           XXX           XXX        &kp GRAVE           XXX            XXX            XXX           XXX           XXX
+              &kp EXCL      &kp AT       &kp PRCNT      &kp AMPS         XXX               XXX           XXX           XXX           XXX        &kp SLASH
         // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                          &kp ESC        XXX          &kp TAB              XXX          XXX           XXX
+                                          &kp ESC       &kp SPACE      &kp TAB             XXX           XXX           XXX
         //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
         };

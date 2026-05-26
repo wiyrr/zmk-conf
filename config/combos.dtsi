@@ -99,7 +99,7 @@
         };
         combo_lpar {
             timeout-ms = <COMBO_TERM>;
-            key-positions = <RT3 RM3>;
+            key-positions = <LT3 LM3>;
             bindings = <&kp LPAR>;
         };
         combo_lbrc {
