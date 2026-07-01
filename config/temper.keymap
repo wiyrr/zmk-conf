@@ -47,7 +47,7 @@
             #binding-cells = <2>;
             flavor = "balanced";
             require-prior-idle-ms = <100>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <175>;
             quick-tap-ms = <QUICK_TAP_MS>;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = < KEYS_R THUMBS >; // List of keys on the right side of the keyboard
@@ -59,7 +59,7 @@
             #binding-cells = <2>;
             flavor = "balanced";
             require-prior-idle-ms = <100>;
-            tapping-term-ms = <200>;
+            tapping-term-ms = <175>;
             quick-tap-ms = <QUICK_TAP_MS>;
             bindings = <&kp>, <&kp>;
             hold-trigger-key-positions = < KEYS_L THUMBS >; // List of keys on the left side of the keyboard
@@ -75,7 +75,6 @@
         track-remainders;
     };
 
-
     macros {
         trigrave:
         trigrave {
@@ -83,12 +82,6 @@
             #binding-cells = <0>;
             // wait-ms = <1>;
             bindings = <&macro_tap &kp GRAVE &kp GRAVE &kp GRAVE>;
-        };
-        lrpar:
-        lrpar {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&macro_tap &kp LPAR &kp RPAR &kp LEFT>;
         };
     };
 
@@ -103,7 +96,7 @@
         // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                 &kp V         &kp W         &kp G         &kp M         &kp J           &kp MINUS      &kp DOT      &kp APOS     &kp EQUAL     &kp SLASH
         // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                        &mt LGUI ESC   &lt NAV R    &lt MOUSE TAB      &lt SYM RET &lt NUM SPACE   &kp BSPC
+                                             XXX      &mt LGUI TAB   &lt NAV R        &lt NUM SPACE  &lt SYM RET       XXX
         //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
         };
@@ -111,13 +104,13 @@
         nav_layer {
             bindings = <
         // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-                 XXX           XXX           XXX       &kp LC(PGDN)      XXX               XXX        &kp HOME     &kp PGDN      &kp PGUP      &kp END
+                 XXX           XXX      &kp LC(PGUP)  &kp LC(PGDN)       XXX               XXX           XXX           XXX           XXX           XXX
         // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                 XXX       &kp LALT      &kp LCTRL     &kp LC(PGUP)      XXX               XXX        &kp LEFT     &kp DOWN      &kp UP        &kp RIGHT
+              &kp LGUI      &kp LALT      &kp LCTRL    &kp LSHIFT        XXX             &kp HOME      &kp LEFT     &kp DOWN      &kp UP       &kp RIGHT
         // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                 XXX           XXX           XXX           XXX           XXX               XXX        &kp DOT      &kp LC(D)     &kp LC(U)        XXX
+                 XXX           XXX           XXX           XXX           XXX             &kp END       &kp DOT      &kp PGDN      &kp PGUP         XXX
         // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                             XXX           XXX           XXX            &kp RET     &kp SPACE        &kp BSPC
+                                             XXX           XXX           XXX            &kp SPACE      &kp RET          XXX
         //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
         };
@@ -125,13 +118,13 @@
         num_layer {
             bindings = <
         // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-                 XXX         &kp N4        &kp N5        &kp N6         &kp X              XXX           XXX          XXX            XXX        &kp BSPC
+                 XXX         &kp N4        &kp N5        &kp N6         &kp X           &kp SEMI      &kp COLON     &kp LPAR      &kp RPAR        XXX
         // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                &kp N0        &kp N1        &kp N2        &kp N3          XXX               XXX       &kp SPACE     &kp DOWN       &kp UP        &kp RET
         // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                  XXX         &kp N7        &kp N8        &kp N9          XXX               XXX        &kp DOT          XXX        &kp PLUS      &kp SLASH
         // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                           &kp ESC       &kp N0        &kp TAB           &kp RET      &kp SPACE     &kp BSPC
+                                             XXX       &kp TAB          &kp N0             XXX          XXX            XXX
         //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
         };
@@ -139,13 +132,13 @@
         sym_layer {
             bindings = <
         // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-              &kp LBKT      &kp LBRC     &kp RBRC       &kp RBKT      &kp GRAVE         &kp SEMI    &kp COLON          XXX           XXX           XXX
+              &kp EXCL      &kp LBRC     &kp RBRC       &kp AT        &kp GRAVE         &kp SEMI      &kp COLON     &kp LBKT      &kp RBKT        XXX
         // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
               &kp CARET     &kp LPAR     &kp RPAR      &kp DOLLAR     &kp TILDE            XXX           XXX           XXX           XXX           XXX
         // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-              &kp EXCL      &kp AT       &kp PRCNT      &kp AMPS         XXX               XXX           XXX           XXX           XXX        &kp SLASH
+              &kp STAR      &kp AMPS      &kp PRCNT     &kp HASH         XXX               XXX           XXX           XXX           XXX        &kp SLASH
         // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                          &kp ESC       &kp SPACE      &kp TAB             XXX           XXX           XXX
+                                            XXX         &kp SPACE      &kp TAB             XXX           XXX           XXX
         //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
         };
