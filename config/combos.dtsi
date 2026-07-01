@@ -1,5 +1,4 @@
 /*                KEY POSITIONS
-
   ╭─────────────────────╮ ╭─────────────────────╮
   │ LT4 LT3 LT2 LT1 LT0 │ │ RT0 RT1 RT2 RT3 RT4 │
   │ LM4 LM3 LM2 LM1 LM0 │ │ RM0 RM1 RM2 RM3 RM4 │
@@ -32,6 +31,16 @@
             key-positions = <LH0 RH0>;
             bindings = <&caps_word>;
         };
+        combo_esc {
+            timeout-ms = <COMBO_TERM>;
+            key-positions = <LM3 LM2>;
+            bindings = <&kp ESC>;
+        };
+        combo_bspc {
+            timeout-ms = <COMBO_TERM>;
+            key-positions = <RT1 RT2>;
+            bindings = <&kp BSPC>;
+        };
         combo_q {
             timeout-ms = <COMBO_TERM>;
             key-positions = <LT3 LT2>;
@@ -44,12 +53,17 @@
         };
         combo_caret {
             timeout-ms = <COMBO_TERM>;
-            key-positions = <RT1 RT2>;
-            bindings = <&kp CARET>;
+            key-positions = <RT0 RT1>;
+            bindings = <&kp BSPC>;
+        };
+        combo_at {
+            timeout-ms = <COMBO_TERM>;
+            key-positions = <RB1 RB3>;
+            bindings = <&kp AT>;
         };
         combo_star {
             timeout-ms = <COMBO_TERM>;
-            key-positions = <RT0 RT1>;
+            key-positions = <RT1 RT3>;
             bindings = <&kp STAR>;
         };
         combo_amps {
@@ -62,80 +76,75 @@
             key-positions = <RB1 RB2>;
             bindings = <&kp PRCNT>;
         };
-        combo_grave {
-            timeout-ms = <COMBO_TERM>;
-            key-positions = <RB0 RB1>;
-            bindings = <&kp GRAVE>;
-        };
-        combo_trigrave {
-            timeout-ms = <COMBO_TERM>;
-            key-positions = <RB0 RB1>;
-            bindings = <&trigrave>;
-        };
         combo_tilde {
             timeout-ms = <COMBO_TERM>;
-            key-positions = <LB0 LB1>;
+            key-positions = <LM1 LM0>;
             bindings = <&kp TILDE>;
         };
+        combo_grave {
+            timeout-ms = <COMBO_TERM>;
+            key-positions = <LB0 LB1>;
+            bindings = <&kp GRAVE>;
+        };
+        /* combo_trigrave { */
+        /*     timeout-ms = <COMBO_TERM>; */
+        /*     key-positions = <RB0 RB1>; */
+        /*     bindings = <&trigrave>; */
+        /* }; */
         combo_dollar {
             timeout-ms = <COMBO_TERM>;
             key-positions = <RT2 RT3>;
             bindings = <&kp DOLLAR>;
         };
-        combo_at {
-            timeout-ms = <COMBO_TERM>;
-            key-positions = <RB1 RB2>;
-            bindings = <&kp AT>;
-        };
-        combo_hash {
-            timeout-ms = <COMBO_TERM>;
-            key-positions = <RT1 RM1>;
-            bindings = <&kp HASH>;
-        };
-        combo_excl {
-            timeout-ms = <COMBO_TERM>;
-            key-positions = <LT0 LM0>;
-            bindings = <&kp EXCL>;
-        };
-        combo_lpar {
+        combo_lbkt {
             timeout-ms = <COMBO_TERM>;
             key-positions = <LT3 LM3>;
-            bindings = <&kp LPAR>;
+            bindings = <&kp LBKT>;
         };
         combo_lbrc {
             timeout-ms = <COMBO_TERM>;
             key-positions = <LT2 LM2>;
             bindings = <&kp LBRC>;
         };
-        combo_lbkt {
-            timeout-ms = <COMBO_TERM>;
-            key-positions = <LM2 LB2>;
-            bindings = <&kp LBKT>;
-        };
-        combo_rpar {
+        combo_rbkt {
             timeout-ms = <COMBO_TERM>;
             key-positions = <RT3 RM3>;
-            bindings = <&kp RPAR>;
+            bindings = <&kp RBKT>;
         };
         combo_rbrc {
             timeout-ms = <COMBO_TERM>;
             key-positions = <RT2 RM2>;
             bindings = <&kp RBRC>;
         };
-        combo_rbkt {
+        combo_excl {
             timeout-ms = <COMBO_TERM>;
-            key-positions = <RM2 RB2>;
-            bindings = <&kp RBKT>;
+            key-positions = <LT1 LM1>;
+            bindings = <&kp EXCL>;
+        };
+        combo_hash {
+            timeout-ms = <COMBO_TERM>;
+            key-positions = <RT1 RM1>;
+            bindings = <&kp HASH>;
         };
         combo_pipe {
             timeout-ms = <COMBO_TERM>;
-            key-positions = <LT1 LM1>;
+            key-positions = <LT0 LM0>;
             bindings = <&kp PIPE>;
         };
         combo_bslh {
             timeout-ms = <COMBO_TERM>;
             key-positions = <RT0 RM0>;
             bindings = <&kp BSLH>;
+        };
+        combo_lpar {
+            timeout-ms = <COMBO_TERM>;
+            key-positions = <LM3 LM1>;
+            bindings = <&kp LPAR>;
+        };
+        combo_rpar {
+            timeout-ms = <COMBO_TERM>;
+            key-positions = <RM1 RM3>;
+            bindings = <&kp RPAR>;
         };
         combo_copy {
             timeout-ms = <COMBO_TERM>;
@@ -157,20 +166,10 @@
             key-positions = <LT4 LT3>;
             bindings = <&kp DEL>;
         };
-        combo_selall {
-            timeout-ms = <COMBO_TERM>;
-            key-positions = <LB2 LB1>;
-            bindings = <&kp LC(A)>;
-        };
-        combo_undo {
-            timeout-ms = <COMBO_TERM>;
-            key-positions = <LM1 LM0>;
-            bindings = <&kp LC(Z)>;
-        };
-        combo_redo {
-            timeout-ms = <COMBO_TERM>;
-            key-positions = <LT1 LT0>;
-            bindings = <&kp LC(Y)>;
-        };
+        /* combo_selall { */
+        /*     timeout-ms = <COMBO_TERM>; */
+        /*     key-positions = <LB2 LB1>; */
+        /*     bindings = <&kp LC(A)>; */
+        /* }; */
     };
 };
