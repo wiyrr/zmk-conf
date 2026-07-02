@@ -1,5 +1,3 @@
-#define HOST_OS 1
-
 #include "keypos_36.h"
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
@@ -13,11 +11,6 @@
 
 #define XXX &none
 #define ___ &trans
-
-/* Homerow mods */
-#define KEYS_L LT0 LT1 LT2 LT3 LT4 LM0 LM1 LM2 LM3 LM4 LB0 LB1 LB2 LB3 LB4
-#define KEYS_R RT0 RT1 RT2 RT3 RT4 RM0 RM1 RM2 RM3 RM4 RB0 RB1 RB2 RB3 RB4
-#define THUMBS LH2 LH1 LH0 RH0 RH1 RH2
 
 /* Global defaults */
 #define QUICK_TAP_MS 150
@@ -63,16 +56,6 @@
         };
     };
 
-    macros {
-        trigrave:
-        trigrave {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            // wait-ms = <1>;
-            bindings = <&macro_tap &kp GRAVE &kp GRAVE &kp GRAVE>;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
         default_layer {
@@ -96,9 +79,9 @@
         // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
               &kp LGUI      &kp LALT      &kp LCTRL    &kp LSHIFT        XXX             &kp HOME      &kp LEFT     &kp DOWN      &kp UP       &kp RIGHT
         // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                 XXX           XXX           XXX           XXX           XXX             &kp END       &kp DOT      &kp PGDN      &kp PGUP         XXX
+                 XXX           XXX           XXX           XXX           XXX               XXX         &kp DOT      &kp PGDN      &kp PGUP      &kp END
         // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                             XXX           XXX           XXX            &kp SPACE      &kp RET          XXX
+                                             XXX           XXX           XXX            &kp SPACE      &kp RET         XXX
         //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
         };
@@ -112,7 +95,7 @@
         // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                  XXX         &kp N7        &kp N8        &kp N9          XXX               XXX        &kp DOT          XXX        &kp PLUS      &kp SLASH
         // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                             XXX       &kp TAB          &kp N0             XXX           XXX           XXX
+                                             XXX        &kp TAB       &kp N0               XXX           XXX           XXX
         //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
         };
@@ -136,11 +119,11 @@
         // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
             &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3   &bt BT_CLR            XXX           XXX           XXX           XXX           XXX
         // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                 XXX          XXX           XXX            XXX       &bootloader       &bootloader       XXX           XXX           XXX           XXX
+                 XXX           XXX           XXX           XXX       &bootloader       &bootloader       XXX           XXX           XXX           XXX
         // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-                 XXX          XXX           XXX            XXX       &sys_reset        &sys_reset        XXX           XXX           XXX           XXX
+                 XXX           XXX           XXX           XXX       &sys_reset        &sys_reset        XXX           XXX           XXX           XXX
         // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                            XXX            XXX           XXX               XXX           XXX           XXX
+                                             XXX           XXX           XXX               XXX           XXX           XXX
         //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
         };
