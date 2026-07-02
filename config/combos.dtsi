@@ -7,7 +7,7 @@
           ╰─────────────╯ ╰─────────────╯ */
 
 
-#define COMBO_TERM 35
+#define COMBO_TERM 42
 #define COMBO_IDLE 50
 
 #define COMBO_TERM_FAST 18
@@ -54,7 +54,7 @@
         combo_caret {
             timeout-ms = <COMBO_TERM>;
             key-positions = <RT0 RT1>;
-            bindings = <&kp BSPC>;
+            bindings = <&kp CARET>;
         };
         combo_at {
             timeout-ms = <COMBO_TERM>;
