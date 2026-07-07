@@ -1,3 +1,4 @@
+#include "helper.h"
 #include "keypos_36.h"
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>

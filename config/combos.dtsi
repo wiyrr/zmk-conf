@@ -1,21 +1,7 @@
-#define ZMK_COMBO(name, combo_bindings, keypos, combo_layers, combo_timeout, combo_idle) \
-    / { \
-        combos { \
-            compatible = "zmk,combos"; \
-            combo_ ## name { \
-                timeout-ms = <combo_timeout>; \
-                bindings = <combo_bindings>; \
-                key-positions = <keypos>; \
-                layers = <combo_layers>; \
-                require-prior-idle-ms = <combo_idle>; \
-            }; \
-        }; \
-    };
-
 #define COMBO_TERM_FAST 25
 #define COMBO_TERM_SLOW 40
-#define COMBO_IDLE_FAST 75
-#define COMBO_IDLE_SLOW 0
+#define COMBO_IDLE_FAST 125
+#define COMBO_IDLE_SLOW 50
 
 /*                KEY POSITIONS
   ╭─────────────────────╮ ╭─────────────────────╮
@@ -33,7 +19,7 @@ ZMK_COMBO(sys_layer, &mo SYS,    LH2 RH2, DEF, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 /* Horizontal combos - left hand */
 ZMK_COMBO(del,   &kp DEL,     LT4 LT3, DEF, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 ZMK_COMBO(q,     &kp Q,       LT3 LT2, DEF, COMBO_TERM_FAST, COMBO_IDLE_SLOW)
-ZMK_COMBO(z,     &kp Z,       LT2 LT1, DEF, COMBO_TERM_FAST, COMBO_IDLE_SLOW)
+ZMK_COMBO(z,     &kp Z,       LT2 LT1, DEF, COMBO_TERM_SLOW)
 ZMK_COMBO(esc,   &kp ESC,     LM3 LM2, DEF, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 ZMK_COMBO(lpar,  &kp LPAR,    LM3 LM1, DEF, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 ZMK_COMBO(tilde, &kp TILDE,   LM1 LM0, DEF, COMBO_TERM_FAST, COMBO_IDLE_FAST)
@@ -43,7 +29,7 @@ ZMK_COMBO(paste, &kp LS(INS), LB2 LB1, DEF, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
 /* Horizontal combos - right hand */
 ZMK_COMBO(dollar, &kp DOLLAR, RT2 RT3, DEF, COMBO_TERM_FAST, COMBO_IDLE_FAST)
-ZMK_COMBO(bspc,   &kp BSPC,   RT1 RT2, DEF, COMBO_TERM_SLOW, COMBO_IDLE_SLOW)
+ZMK_COMBO(bspc,   &kp BSPC,   RT1 RT2, DEF, COMBO_TERM_SLOW)
 ZMK_COMBO(caret,  &kp CARET,  RT0 RT1, DEF, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 ZMK_COMBO(rpar,   &kp RPAR,   RM1 RM3, DEF, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 ZMK_COMBO(grave,  &kp GRAVE,  RM0 RM1, DEF, COMBO_TERM_FAST, COMBO_IDLE_FAST)
