@@ -245,3 +245,17 @@
     / { \
         chosen { zmk,matrix_transform = &transform; }; \
     };
+
+/* Homerow mods */
+
+#define MAKE_HRM(NAME, HOLD, TAP, TRIGGER_POS)                                 \
+  ZMK_HOLD_TAP(NAME, bindings = <HOLD>, <TAP>; flavor = "balanced";            \
+               tapping-term-ms = <280>; quick-tap-ms = <QUICK_TAP_MS>;         \
+               require-prior-idle-ms = <150>; hold-trigger-on-release;         \
+               hold-trigger-key-positions = <TRIGGER_POS>;)
+
+// Hack: Make HRM combos tap-only (cf, ZMK issue #544).
+
+#define ZMK_COMBO_8(NAME, TAP, POS, LAYERS, COMBO_MS, IDLE_MS, HOLD, SIDE)     \
+  MAKE_HRM(hm_combo_##NAME, &kp, TAP, SIDE THUMBS)                             \
+  ZMK_COMBO_6(NAME, &hm_combo_##NAME HOLD 0, POS, LAYERS, COMBO_MS, IDLE_MS)
