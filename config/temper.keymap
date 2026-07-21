@@ -29,35 +29,12 @@
     quick-tap-ms = <QUICK_TAP_MS>;
 };
 
+MAKE_HRM(hml, &kp, &kp, KEYS_R THUMBS) // Left-hand HRMs.
+MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS) // Right-hand HRMs.
+
 #include "combos.dtsi"
 
 / {
-    behaviors {
-        hml: home_row_mod_left {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            require-prior-idle-ms = <155>;
-            tapping-term-ms = <220>;
-            quick-tap-ms = <QUICK_TAP_MS>;
-            bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = < KEYS_R THUMBS >; // List of keys on the right side of the keyboard
-            hold-trigger-on-release;
-        };
-
-        hmr: home_row_mod_right {
-            compatible = "zmk,behavior-hold-tap";
-            #binding-cells = <2>;
-            flavor = "balanced";
-            require-prior-idle-ms = <155>;
-            tapping-term-ms = <220>;
-            quick-tap-ms = <QUICK_TAP_MS>;
-            bindings = <&kp>, <&kp>;
-            hold-trigger-key-positions = < KEYS_L THUMBS >; // List of keys on the left side of the keyboard
-            hold-trigger-on-release;
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
         default_layer {
@@ -133,13 +110,13 @@
         game_layer {
             bindings = <
         // ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮   ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-             &kp ESC            XXX           XXX           XXX           XXX           XXX             XXX            XXX          XXX          &tog GAME
+             &kp ESC          &kp N1        &kp N2        &kp N3        &kp N4             XXX           XXX           XXX           XXX       &tog GAME
         // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-             &kp LSHIFT        &kp A        &kp W           &kp D           XXX           XXX              XXX           XXX           XXX           XXX
+             &kp LSHIFT       &kp A         &kp W         &kp D         &kp E              XXX           XXX           XXX           XXX           XXX
         // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-             &kp LCTRL         XXX          &kp S           XXX           XXX            XXX              XXX           XXX           XXX           XXX
+             &kp LCTRL        &kp Z         &kp S         &kp C         &kp V              XXX           XXX           XXX           XXX           XXX
         // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                             XXX        &kp S          &kp S               XXX           XXX           XXX
+                                             XXX        &kp R         &kp SPACE            XXX           XXX           XXX
         //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
         };
