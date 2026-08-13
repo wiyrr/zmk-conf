@@ -13,3 +13,6 @@ udiskie &
 ```sh
 cd ./path_to_this_repository
 nix run .#flash
+```
+
+![keymap](./assets/visualization.png)
