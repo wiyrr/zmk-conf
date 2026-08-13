@@ -15,4 +15,10 @@ cd ./path_to_this_repository
 nix run .#flash
 ```
 
+## Keymaps
+
 ![keymap](./assets/visualization.png)
+
+## TODO
+ - [ ] Dongle setup
+ - [ ] Full keymaps
