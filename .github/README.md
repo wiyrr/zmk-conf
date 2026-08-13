@@ -22,3 +22,5 @@ nix run .#flash
 ## TODO
  - [ ] Dongle setup
  - [ ] Full keymaps
+
+ ## Acknowledgements
