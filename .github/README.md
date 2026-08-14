@@ -1,5 +1,7 @@
 # zmk-conf
 
+This is my personal ZMK config for the temper.
+
 ## Flashing with nix-zmk
 
 1. Run `udiskie` daemon for automount (optional)
@@ -29,4 +31,3 @@ nix run .#flash
 - [raeedcho/temper](https://github.com/raeedcho/temper)
 - [lilyinstarlight/zmk-nix](https://github.com/lilyinstarlight/zmk-nix)
 - [urob/zmk-config](https://github.com/urob/zmk-config)
-- [rayduck/pnohty](https://github.com/rayduck/pnohty) for a sensible NUM layer idea.
