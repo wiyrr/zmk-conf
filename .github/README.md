@@ -24,9 +24,9 @@ nix run .#flash
  - [ ] Full keymaps
 
  ## Acknowledgements
-- [raeedcho/temper](https://github.com/raeedcho/temper)
-- [lilyinstarlight/zmk-nix](https://github.com/lilyinstarlight/zmk-nix)
 - [Hands Down Promethium](https://www.reddit.com/r/KeyboardLayouts/comments/1g66ivi/hands_down_promethium_snth_meets_hd_silverengram/), base layout.
 - [The T-34 keyboard layout](https://www.jonashietala.se/series/t-34)
+- [raeedcho/temper](https://github.com/raeedcho/temper)
+- [lilyinstarlight/zmk-nix](https://github.com/lilyinstarlight/zmk-nix)
 - [urob/zmk-config](https://github.com/urob/zmk-config)
-- [rayduck/pnohty](https://github.com/rayduck/pnohty)for a sensible NUM layer idea.
+- [rayduck/pnohty](https://github.com/rayduck/pnohty) for a sensible NUM layer idea.
