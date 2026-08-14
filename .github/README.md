@@ -1,6 +1,6 @@
 # zmk-conf
 
-This is my personal ZMK config for the [temper](https://github.com/raeedcho/temper-zmk-config).
+This is my personal ZMK config for the [temper](https://github.com/raeedcho/temper).
 
 ## Flashing with nix-zmk
 
