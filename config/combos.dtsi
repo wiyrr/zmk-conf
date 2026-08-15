@@ -14,7 +14,7 @@
 
 /* Cross-hand combos */
 ZMK_COMBO(capsword,  &caps_word, LH0 RH0, DEF, COMBO_TERM_FAST, COMBO_IDLE_FAST)
-ZMK_COMBO(fun_layer, &mo FUN,    LH1 RH1, DEF, COMBO_TERM_FAST, COMBO_IDLE_FAST)
+/* ZMK_COMBO(fun_layer, &mo FUN,    LH1 RH1, DEF, COMBO_TERM_FAST, COMBO_IDLE_FAST) */
 ZMK_COMBO(sys_layer, &mo SYS,    LH2 RH2, DEF, COMBO_TERM_FAST, COMBO_IDLE_FAST)
 
 /* Horizontal combos - left hand */
