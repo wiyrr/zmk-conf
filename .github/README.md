@@ -1,6 +1,6 @@
 # zmk-conf
 
-This is my personal ZMK config for the [temper](https://github.com/raeedcho/temper).
+This is my personal ZMK firmware config for the [temper](https://github.com/raeedcho/temper).
 
 ## Flashing with nix-zmk
 
@@ -24,6 +24,10 @@ nix run .#flash
 ## TODO
  - [ ] Dongle setup
  - [ ] Full keymaps
+
+## Why 34?
+
+[PSA: Thumbs can get overuse injuries](https://getreuer.info/posts/keyboards/thumb-ergo/index.html)
 
  ## Acknowledgements
 - [Hands Down Promethium](https://www.reddit.com/r/KeyboardLayouts/comments/1g66ivi/hands_down_promethium_snth_meets_hd_silverengram/), base layout.
