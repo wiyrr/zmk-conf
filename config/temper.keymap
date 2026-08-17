@@ -32,8 +32,6 @@
 MAKE_HRM(hml, &kp, &kp, KEYS_R THUMBS) // Left-hand HRMs.
 MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS) // Right-hand HRMs.
 
-ZMK_MOD_MORPH(funret, bindings = <&lt MOUSE RET>, <&lt FUN LG(RET)>; mods = <(MOD_LGUI)>;)
-
 #include "combos.dtsi"
 #include "mouse.dtsi"
 
@@ -49,7 +47,7 @@ ZMK_MOD_MORPH(funret, bindings = <&lt MOUSE RET>, <&lt FUN LG(RET)>; mods = <(MO
         // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                 &kp V         &kp W         &kp G         &kp M         &kp J           &kp MINUS      &kp DOT      &kp APOS     &kp EQUAL     &kp SLASH
         // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                             XXX      &mt LGUI TAB   &lt NAV R        &lt NUM SPACE    &funret         XXX
+                                             XXX      &mt LGUI TAB   &lt NAV R        &lt NUM SPACE  &lt FUN RET       XXX
         //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
         };
@@ -77,7 +75,7 @@ ZMK_MOD_MORPH(funret, bindings = <&lt MOUSE RET>, <&lt FUN LG(RET)>; mods = <(MO
         // ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                  XXX         &kp N7        &kp N8        &kp N9          XXX            &kp MINUS     &kp DOT          XXX        &kp PLUS      &kp SLASH
         // ╰─────────────┴─────────────┼─────────────┼─────────────┼─────────────┤   ├─────────────┼─────────────┼─────────────┼─────────────┴─────────────╯
-                                             XXX        &mo FUN       &kp N0               XXX           XXX           XXX
+                                             XXX         &kp TAB       &kp N0               XXX           XXX           XXX
         //                             ╰─────────────┴─────────────┴─────────────╯   ╰─────────────┴─────────────┴─────────────╯
             >;
         };
@@ -119,7 +117,7 @@ ZMK_MOD_MORPH(funret, bindings = <&lt MOUSE RET>, <&lt FUN LG(RET)>; mods = <(MO
                 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
                         XXX           XXX           XXX           XXX           XXX             XXX          XXX           XXX          XXX           XXX
                 //╰─────────────┼─────────────┴─────────────┼─────────────┼─────────────┤ ├─────────────┼─────────────┼─────────────┴───────────────────────────╯
-                                                    XXX        &mkp RCLK    &mkp LCLK           XXX          XXX           XXX
+                                                    XXX        &mo FUN      &mkp LCLK           XXX          XXX           XXX
                 //                            ╰─────────────┴─────────────┴─────────────╯ ╰─────────────┴─────────────┴─────────────╯
             >;
         };
